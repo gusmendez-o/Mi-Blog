@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Blog</title>
+    <!-- Carga de Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Carga de la fuente Inter de Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
+    <!-- Carga de Font Awesome para los íconos de redes sociales -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* Estilos personalizados para el tema Tron */
+        :root {
+            --neon-blue: #00e5ff;
+            --dark-bg: #0d1117;
+            --dark-card: #161b22;
+            --text-color: #f0f6fc;
+            --code-font: 'Inconsolata', monospace;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-color);
+            background-image: linear-gradient(rgba(0, 229, 255, 0.05) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(0, 229, 255, 0.05) 1px, transparent 1px);
+            background-size: 50px 50px;
+        }
+        
+        .neon-text {
+            text-shadow: 0 0 5px var(--neon-blue), 0 0 10px var(--neon-blue), 0 0 20px var(--neon-blue);
+        }
+
+        /* Nueva clase para el texto color neón */
+        .neon-blue-text {
+            color: var(--neon-blue);
+        }
+
+        .neon-border {
+            border: 2px solid var(--neon-blue);
+            box-shadow: 0 0 5px var(--neon-blue), 0 0 10px var(--neon-blue);
+        }
+
+        .neon-shadow {
+            box-shadow: 0 0 5px var(--neon-blue), 0 0 15px var(--neon-blue);
+        }
+
+        .neon-hover:hover {
+            color: var(--neon-blue);
+            transform: translateY(-2px);
+            transition: all 0.2s ease-in-out;
+        }
+
+        .tron-post {
+            background-color: var(--dark-card);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .tron-post:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 229, 255, 0.2), 0 0 15px rgba(0, 229, 255, 0.4);
+        }
+
+        .code-block {
+            font-family: var(--code-font);
+            background-color: #0c0f13;
+            border-left: 3px solid var(--neon-blue);
+            white-space: pre-wrap;
+        }
+
+        .back-button {
+            background-color: var(--dark-card);
+            border: 2px solid var(--neon-blue);
+            color: var(--neon-blue);
+            padding: 8px 16px;
+            font-size: 14px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+            margin-bottom: 2rem;
+        }
+        
+        .back-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 10px var(--neon-blue);
+        }
+
+        /* Animación para el efecto de pulso neón */
+        @keyframes neon-pulse {
+            from {
+                text-shadow: 0 0 5px var(--neon-blue), 0 0 10px var(--neon-blue), 0 0 20px var(--neon-blue);
+            }
+            to {
+                text-shadow: 0 0 10px var(--neon-blue), 0 0 20px var(--neon-blue), 0 0 30px var(--neon-blue), 0 0 40px var(--neon-blue);
+            }
+        }
+        
+        .neon-pulse-animation {
+            animation: neon-pulse 1.5s infinite alternate ease-in-out;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="min-h-screen flex flex-col items-center p-4">
+        <!-- Contenedor principal para centrar el contenido -->
+        <div class="w-full max-w-5xl mx-auto">
+
+            <!-- Encabezado con título del blog -->
+            <header class="py-8 text-center">
+                <!-- Se agrega la clase de animación al título -->
+                <h1 class="text-5xl font-bold uppercase tracking-widest neon-text neon-pulse-animation">Mi Blog</h1>
+            </header>
+
+            <!-- Sección principal de contenido dinámico -->
+            <main id="main-content" class="space-y-12">
+                
+                <!-- Contenedor para el primer post del blog -->
+                <article class="tron-post p-6 rounded-lg neon-border">
+                    <h2 class="text-3xl font-bold neon-hover mb-2">
+                        Te invito a ser parte de mi blog!
+                    </h2>
+                
+                    <p class="text-lg leading-relaxed">
+                        Si te gustan las ideas que inspiran, las reflexiones que conectan con el alma y los contenidos que transforman la manera de ver la vida, este espacio es para vos. Cada publicación está pensada para motivarte, hacerte pensar y acompañarte en tu camino personal y creativo.
+                        Seguime y descubrí un nuevo punto de vista en cada lectura. Tu presencia en este espacio hace la diferencia.
+                    </p>
+                </article>
+
+                <!-- Segundo post del blog -->
+                <article class="tron-post p-6 rounded-lg neon-border">
+                    <h2 class="text-3xl font-bold neon-hover mb-2">
+                        Sobre mí
+                    </h2>
+                    <p class="text-lg leading-relaxed">
+                        Como redactor de contenido, mi misión es fusionar la comunicación auténtica con la potencia de la palabra escrita. Mi enfoque se centra en crear narrativas que no solo informen e inspiren, sino que también establezcan una conexión significativa con la audiencia. Me especializo en la elaboración de contenido valioso y claro para cada proyecto, caracterizándome por un estilo profesional y meticuloso. Mi compromiso es la mejora continua para ofrecer siempre la máxima calidad y relevancia.
+                    </p>
+                </article>
+
+                <!-- Tercer post del blog (con botón 'Leer más') -->
+                <article class="tron-post p-6 rounded-lg neon-border">
+                    <h2 class="text-3xl font-bold neon-hover mb-2">
+                        Qué hay en mi blog
+                    </h2>
+                    <p class="text-lg leading-relaxed mb-4">
+                        En mi blog, te sumergirás en un universo de ideas frescas y perspectivas innovadoras. Exploro temas que van desde el desarrollo personal y la creatividad, hasta reflexiones sobre la tecnología y su impacto en nuestras vidas. Cada entrada es una oportunidad para crecer, aprender y expandir tus horizontes.
+                    </p>
+                    <div class="mt-6">
+                        <a href="javascript:void(0)" onclick="loadPost('post-3')" class="inline-block px-4 py-2 text-sm font-semibold uppercase tracking-wider rounded-md neon-text neon-border neon-hover">
+                            Leer más
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Cuarto post del blog (nuevo artículo) -->
+                <article class="tron-post p-6 rounded-lg neon-border">
+                    <h2 class="text-3xl font-bold neon-hover mb-2">
+                        El Poder de la Creatividad
+                    </h2>
+                    <p class="text-lg leading-relaxed">
+                        La creatividad es mucho más que talento artístico; es una habilidad para resolver problemas y ver el mundo de maneras únicas. En esta publicación, exploramos cómo puedes potenciar tu pensamiento creativo en tu vida diaria y profesional.
+                    </p>
+                    <div class="mt-6">
+                        <a href="javascript:void(0)" onclick="loadPost('post-4')" class="inline-block px-4 py-2 text-sm font-semibold uppercase tracking-wider rounded-md neon-text neon-border neon-hover">
+                            Leer más
+                        </a>
+                    </div>
+                </article>
+
+            </main>
+
+            <!-- Pie de página (dentro del contenedor principal) -->
+            <footer class="py-12 mt-12 text-center text-gray-400">
+                <p class="text-xl neon-text neon-blue-text">Sígueme</p>
+                <!-- Se agregó la clase `my-4` para darle un margen vertical y centrarlo visualmente -->
+                <div class="flex justify-center text-2xl my-4">
+                    <a href="https://www.facebook.com/gustavo.mendez.703809/" class="neon-text neon-blue-text neon-hover"><i class="fab fa-facebook-f"></i></a>
+                </div>
+                
+                <!-- Texto de derechos de autor -->
+                <p class="text-sm mt-6">
+                    © 2025 Mi Blog · Gustavo Mendez - Developer | Todos los derechos reservados
+                </p>
+            </footer>
+
+        </div>
+    </div>
+
+    <script>
+        // Objeto que contiene el contenido completo de los posts
+        const posts = {
+            // Contenido completo para el tercer artículo
+            'post-3': {
+                title: 'Qué hay en mi blog',
+                fullContent: `
+                    <p class="text-lg leading-relaxed mb-6">
+                        En mi blog, te sumergirás en un universo de ideas frescas y perspectivas innovadoras. Exploro temas que van desde el desarrollo personal y la creatividad, hasta reflexiones sobre la tecnología y su impacto en nuestras vidas. Cada entrada es una oportunidad para crecer, aprender y expandir tus horizontes. No se trata solo de leer, sino de interactuar con el contenido y encontrar nuevas formas de aplicar estas ideas en tu día a día.
+                    </p>
+                    <p class="text-lg leading-relaxed mb-6">
+                        Mi objetivo es crear un espacio donde la curiosidad sea la protagonista. Desde reseñas de libros que me han inspirado, hasta guías prácticas sobre cómo mejorar tu productividad, mi blog es un reflejo de mi pasión por el aprendizaje continuo y el crecimiento personal. ¡Explora, lee y únete a la conversación!
+                    </p>
+                `
+            },
+            // Contenido completo para el cuarto artículo
+            'post-4': {
+                title: 'El Poder de la Creatividad',
+                fullContent: `
+                    <p class="text-lg leading-relaxed mb-6">
+                        La creatividad es mucho más que talento artístico; es una habilidad para resolver problemas y ver el mundo de maneras únicas. En esta publicación, exploramos cómo puedes potenciar tu pensamiento creativo en tu vida diaria y profesional. La creatividad es un músculo que, como cualquier otro, se fortalece con la práctica.
+                    </p>
+                    <p class="text-lg leading-relaxed mb-6">
+                        Algunas técnicas sencillas para fomentar la creatividad incluyen:
+                        <ul class="list-disc list-inside mt-2 space-y-2">
+                            <li>**Escribir libremente:** Dedica unos minutos al día a escribir sin censura sobre cualquier tema que te venga a la mente.</li>
+                            <li>**Cambiar tu rutina:** Intenta hacer algo diferente cada día, como tomar una ruta distinta para ir al trabajo o probar una nueva receta.</li>
+                            <li>**Rodearte de inspiración:** Visita museos, lee libros de diferentes géneros y escucha música que no sueles escuchar.</li>
+                        </ul>
+                    </p>
+                    <p class="text-lg leading-relaxed mb-6">
+                        Desarrollar tu creatividad no solo te hará más innovador, sino que también mejorará tu capacidad de adaptación y tu bienestar emocional. Es una herramienta poderosa para navegar por un mundo en constante cambio.
+                    </p>
+                `
+            }
+        };
+
+        const mainContent = document.getElementById('main-content');
+        // Guardar el contenido inicial del blog para poder volver a él
+        const initialContent = mainContent.innerHTML;
+
+        /**
+         * Carga el contenido completo de un post.
+         * @param {string} postId - El ID del post a cargar.
+         */
+        function loadPost(postId) {
+            const post = posts[postId];
+            if (post) {
+                // Reemplazar el contenido principal con el post completo y un botón de regreso
+                mainContent.innerHTML = `
+                    <button onclick="goBack()" class="back-button">Volver al Blog</button>
+                    <article class="tron-post p-6 rounded-lg neon-border">
+                        <h2 class="text-4xl font-bold neon-text mb-2">${post.title}</h2>
+                        ${post.fullContent}
+                    </article>
+                `;
+            }
+        }
+
+        /**
+         * Restaura la vista principal del blog, mostrando todos los posts.
+         */
+        function goBack() {
+            mainContent.innerHTML = initialContent;
+        }
+    </script>
+</body>
+</html>
